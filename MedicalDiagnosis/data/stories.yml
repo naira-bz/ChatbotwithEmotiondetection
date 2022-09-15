@@ -1,0 +1,96 @@
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodby
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: diagnosis path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_help
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: deny
+  - action: utter_alternative
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: deny
+  - action: utter_alternative
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: deny
+  - action: utter_alternative
+  - intent: deny
+  - action: utter_alternative
+  - intent: end
+  - action: action_diagnosis
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodby
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: diagnosis path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_help
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: deny
+  - action: utter_alternative
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: deny
+  - action: utter_alternative
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: deny
+  - action: utter_alternative
+  - intent: end
+  - action: action_diagnosis
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodby
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: diagnosis path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_help
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: symptom
+  - action: action_handle_symptom
+  - intent: end
+  - action: action_diagnosis
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_goodby
+  - intent: goodbye
+  - action: utter_goodbye
